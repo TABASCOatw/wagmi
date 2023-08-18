@@ -18,12 +18,12 @@ export function chainstackProvider<TChain extends Chain = Chain>({
         ...chain,
         rpcUrls: {
           ...chain.rpcUrls,
-          default: { http: [`${baseHttpUrl}/${apiKey}`] },
+          default: { http: [`${baseHttpUrl}${apiKey}`] },
         },
       } as TChain,
       rpcUrls: {
-        http: [`${baseHttpUrl}/${apiKey}`],
-        webSocket: [`${baseWsUrl}/${apiKey}`],
+        http: [`${baseHttpUrl}${apiKey}`],
+        webSocket: [`${baseWsUrl}${apiKey}`],
       },
     }
   }
